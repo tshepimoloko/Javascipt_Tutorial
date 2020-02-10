@@ -2,6 +2,20 @@ const express = require ('express');
 const bodyParse = require('body-parser');
 const router = express.Router();
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+
+//create geolocation Schema
+const GeoSchema = new Schema({
+  type:{
+    type:String,
+    default:"Point"
+  }
+  coordinates:{
+    type: [Number],
+    index:'2dsphere'
+  }
+})
 
 // get a list of ninjas from the db
 router.get('/ninjas', function(req, res){

@@ -15,6 +15,13 @@ available:{
   type Boolean,
   default:false
 }
+geometry: GeoSchema:{
+  // "geometry" : {
+  //   "type": "Point",
+  //   "coordinates":[125.6,10.1]
+  // }
+}
+
 //add in geo loacation
 });
 const Ninja = mongoose.model('ninja'.NinjaSchema);
